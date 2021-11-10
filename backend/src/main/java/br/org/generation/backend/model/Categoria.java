@@ -16,16 +16,46 @@ public class Categoria {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	@NotNull(message = "")
-	@Size(min = 4, max = 255, message = "O atributo produto deve conter no mínimo 04 e no máximo 255 caracteres")
-	private String produto;
+	@NotNull(message = "O campo categoria é obrigatório")
+	@Size(min = 4, max = 255, message = "O atributo categoria deve conter no mínimo 04 e no máximo 255 caracteres")
+	private String tipo;
 
-	@NotNull(message = "")
-	// adicionar um metodo para gerar uma menssagem
-	private boolean disponibilidade;
-
-	@NotNull(message = "")
+	@Size(min = 4, max = 1000, message = "O atributo descrição deve conter no mínimo 04 e no máximo 1000 caracteres")
+	private String descricao;
+	
 	@Size(min = 4, max = 255, message = "O atributo palavra chave deve conter no mínimo 04 e no máximo 255 caracteres")
-	private String palavra_chave;
+	private String palavrachave;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setCategoria(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	
+	public String getPalavrachave() {
+		return palavrachave;
+	}
+
+	public void setPalavrachave(String palavrachave) {
+		this.palavrachave = palavrachave;
+	}	
 
 }
