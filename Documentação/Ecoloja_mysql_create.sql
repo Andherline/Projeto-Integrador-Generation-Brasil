@@ -19,7 +19,7 @@ CREATE TABLE `Produto` (
 CREATE TABLE `Usuario` (
 	`id` bigint NOT NULL AUTO_INCREMENT,
 	`nome_completo` varchar(255) NOT NULL,
-	`email` varchar(255) NOT NULL,
+	`usuario` varchar(255) NOT NULL,
 	`senha` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
