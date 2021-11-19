@@ -8,6 +8,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 @Table (name = "tb_usuario")
 public class Usuario {
@@ -16,9 +18,12 @@ public class Usuario {
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	
 	@NotNull (message = "Este campo é obrigatório.")
-	@Email
+	private String nome;
+	
+	@ApiModelProperty(example = "email@email.com.br")
+	@NotNull(message = "O atributo Usuário é Obrigatório!")
+	@Email(message = "O atributo deve ser um email válido!")
 	private String usuario;
 	
 	@NotNull (message = "Este campo é obrigatório.")
@@ -30,6 +35,14 @@ public class Usuario {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getUsuario() {

@@ -1,4 +1,5 @@
 package br.org.generation.backend.controller;
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -70,4 +71,12 @@ public class ProdutoController {
 				})
 				.orElse(ResponseEntity.notFound().build());
 	}
-}
+	
+	// Consulta por preço entre dois valores (Between)
+	
+		@GetMapping("/preco_inicial/{inicio}/preco_final/{fim}")
+		public ResponseEntity<List<Produto>> getByPrecoEntre(@PathVariable BigDecimal inicio, @PathVariable BigDecimal fim){
+			return ResponseEntity.ok(produtoRepository.buscarProdutosEntre(inicio, fim));
+		}
+
+	}

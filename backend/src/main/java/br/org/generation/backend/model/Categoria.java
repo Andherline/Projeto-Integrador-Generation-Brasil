@@ -1,12 +1,19 @@
 package br.org.generation.backend.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @Entity
 @Table(name = "tb_categoria")
@@ -25,6 +32,11 @@ public class Categoria {
 	
 	@Size(min = 4, max = 255, message = "O atributo palavra chave deve conter no mínimo 04 e no máximo 255 caracteres")
 	private String palavrachave;
+	
+	@OneToMany(mappedBy = "categoria",cascade =CascadeType.ALL)
+	@JsonIgnoreProperties("categoria")
+	private List<Produto> produto;
+	
 
 	public long getId() {
 		return id;
