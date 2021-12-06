@@ -1,0 +1,9 @@
+.cursor{
+    cursor: auto;
+    color:rgb(255, 255, 255);
+    background-color: green;
+
+}
+.text-decorator-none{
+    text-decoration: none;
+}
