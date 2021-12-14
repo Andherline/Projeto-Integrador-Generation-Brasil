@@ -25,18 +25,18 @@ function NavBar() {
                             <Link to='/home' className="text-decorator-none">
                                 <Box mx={2} style={{ cursor: "pointer" }} marginLeft={10}>
                                     <Typography variant="h6" color="inherit">
-                                        home
+                                        Home
                                     </Typography>
                                 </Box>
                             </Link>
-                            <Link to='/categoria' className="text-decorator-none">
+                            <Link to='/categorias' className="text-decorator-none">
                                 <Box mx={1} style={{ cursor: "pointer" }}>
                                     <Typography variant="h6" color="inherit">
                                         Categoria
                                     </Typography>
                                 </Box>
                             </Link>
-                            <Link to='/produto' className="text-decorator-none">
+                            <Link to='/produtos' className="text-decorator-none">
                                 <Box mx={1} style={{ cursor: "pointer" }}>
                                     <Typography variant="h6" color="inherit">
                                         Produtos
@@ -46,14 +46,21 @@ function NavBar() {
                             <Link to='/cadastrarproduto' className="text-decorator-none">
                                 <Box mx={1} style={{ cursor: "pointer" }}>
                                     <Typography variant="h6" color="inherit">
-                                        cadastrar produto
+                                        Cadastrar Produto
+                                    </Typography>
+                                </Box>
+                            </Link>
+                            <Link to='/cadastrarcategorias' className="text-decorator-none">
+                                <Box mx={1} style={{ cursor: "pointer" }}>
+                                    <Typography variant="h6" color="inherit">
+                                        Cadastrar Categoria
                                     </Typography>
                                 </Box>
                             </Link>
                             <Link to='/login' className="text-decorator-none">
                                 <Box mx={1} style={{ cursor: "pointer" }} marginLeft={80}>
                                     <Typography variant="h6" color="inherit">
-                                        logout
+                                        Logout
                                     </Typography>
                                 </Box>
                             </Link>
