@@ -21,7 +21,7 @@ import br.org.generation.backend.model.Produto;
 import br.org.generation.backend.repository.ProdutoRepository;
 
 @RestController
-@CrossOrigin(origins = "", allowedHeaders = "")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/produtos")
 public class ProdutoController {
 	@Autowired
