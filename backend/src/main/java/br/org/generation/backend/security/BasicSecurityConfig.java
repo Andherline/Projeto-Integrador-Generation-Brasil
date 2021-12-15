@@ -23,8 +23,6 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
-
-
          auth.userDetailsService(userDetailsService);
 
          auth.inMemoryAuthentication()
@@ -48,7 +46,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
      	.antMatchers(HttpMethod.OPTIONS).permitAll()
      	.anyRequest().authenticated()
      	.and().httpBasic()
-         .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
      	.and().cors()
      	.and().csrf().disable();
      }
