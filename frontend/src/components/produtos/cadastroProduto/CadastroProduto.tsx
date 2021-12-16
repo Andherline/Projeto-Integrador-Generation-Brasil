@@ -45,13 +45,13 @@ function CadastroProduto() {
     }, [categoria])
 
     useEffect(() => {
-        getTemas()
+        getCategoria()
         if (id !== undefined) {
-            findByIdPostagem(id)
+            findByIdProduto(id)
         }
     }, [id])
 
-    async function getTemas() {
+    async function getCategoria() {
         await busca("/categorias", setCategorias, {
             headers: {
                 'Authorization': token
@@ -59,7 +59,7 @@ function CadastroProduto() {
         })
     }
 
-    async function findByIdPostagem(id: string) {
+    async function findByIdProduto(id: string) {
         await buscaId(`produtos/${id}`, setProduto, {
             headers: {
                 'Authorization': token
@@ -92,7 +92,7 @@ function CadastroProduto() {
     }
 
     function back() {
-        history.push('/produto')
+        history.push('/produtos')
     }
 
     return (

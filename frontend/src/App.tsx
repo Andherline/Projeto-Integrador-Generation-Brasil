@@ -5,7 +5,7 @@ import Footer from './components/estaticos/footer/Footer';
 import CadastroUsuario from './paginas/cadastro/CadastroUsuario';
 import Home from './paginas/home/Home';
 import Login from './paginas/login/Login';
-import CadastroProduto from './components/produtos/cadastroProduto/CadastroProdutro';
+import CadastroProduto from './components/produtos/cadastroProduto/CadastroProduto';
 import './App.css';
 import { Provider } from 'react-redux';
 import store from './store/store';
@@ -14,8 +14,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import CadastroCategoria from './components/categoria/cadastroCategoria/CadastroCategoria';
 import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria';
 import ListaProduto from './components/produtos/listaProduto/ListaProduto';
-
-
+import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
+import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
 function App() {
   return (
     <Provider store={store}>
@@ -56,6 +56,10 @@ function App() {
             <Route exact path='/cadastrarcategorias/:id'>
               <CadastroCategoria />
             </Route>
+            
+            <Route path='/deletarcategorias/:id'>
+              <DeletarCategoria />
+            </Route>
 
             <Route exact path='/cadastrarproduto'>
               <CadastroProduto />
@@ -63,6 +67,10 @@ function App() {
 
             <Route exact path='/cadastrarproduto/:id'>
               <CadastroProduto />
+            </Route>
+
+            <Route exact path='/deletarproduto/:id'>
+              <DeletarProduto />
             </Route>
 
           </div>
