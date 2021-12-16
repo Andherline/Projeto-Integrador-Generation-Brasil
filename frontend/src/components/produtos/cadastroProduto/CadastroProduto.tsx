@@ -4,7 +4,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import Categoria from '../../../models/Categoria';
 import Produto from '../../../models/Produto';
-import { busca, buscaId, post } from '../../../services/Service';
+import { busca, buscaId, post, put } from '../../../services/Service';
 
 
 function CadastroProduto() {
@@ -80,12 +80,22 @@ function CadastroProduto() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
 
-        post(`/produtos`, produto, setProduto, {
-            headers: {
-                'Authorization': token
-            }
-        })
-        alert('Produto cadastrada com sucesso');
+        if (id !== undefined) {
+            console.log(produto)
+            put(`/produtos`, produto, setProduto, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            alert('Produto atualizado com sucesso');
+        } else {
+            post(`/produtos`, produto, setProduto, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            alert('Produto cadastrado com sucesso');
+        }
 
         back()
 

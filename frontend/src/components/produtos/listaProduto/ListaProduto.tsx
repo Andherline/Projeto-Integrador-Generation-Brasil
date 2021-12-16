@@ -41,9 +41,11 @@ function ListaProduto() {
                     <Box m={2} >
                         <Card variant="outlined">
                             <CardContent>
+
                                 <Typography color="textSecondary" gutterBottom>
                                     Produtos
                                 </Typography>
+                                <img src={produto.foto} alt="" />
                                 <Typography variant="h5" component="h2">
                                     {produto.nome}
                                 </Typography>
@@ -53,9 +55,7 @@ function ListaProduto() {
                                 <Typography variant="body2" component="p">
                                     {produto.descricao}
                                 </Typography>
-                                <Typography variant="body2" component="p">
-                                    {produto.foto}
-                                </Typography>
+                            
                                 <Typography variant="body2" component="p">
                                     {produto.categoria?.palavrachave}
                                 </Typography>

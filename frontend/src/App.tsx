@@ -16,6 +16,8 @@ import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria
 import ListaProduto from './components/produtos/listaProduto/ListaProduto';
 import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
+//import TesteHome from './paginas/testehome/TesteHome';
+
 function App() {
   return (
     <Provider store={store}>

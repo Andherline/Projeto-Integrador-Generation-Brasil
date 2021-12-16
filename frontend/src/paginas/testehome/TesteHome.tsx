@@ -2,27 +2,27 @@ import { Box, Grid, Typography } from '@material-ui/core';
 import React from 'react'
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import './Home.css';
+import './TesteHome.css';
 
-function Home() {
+function TesteHome() {
     return (
         <>
             <Grid direction='column' justifyContent="center" alignItems="center" spacing={2}>
                 <Box className='caixa1' paddingTop={1}>
-                    <Typography variant="h5" color="inherit" align="center"><b>MISSÃO</b></Typography>
+                    <Typography variant="h5" color="inherit" align="center">MISSÃO</Typography>
                     <Typography variant="h6" align="justify" gutterBottom >
                         Temos como missão fornecer excelentes produtos que possam melhorar a qualidade de vida de nossos estimados clientes, tendo em vista princípios de sustentabilidade, responsabilidade social e ambiental, respeito com o meio ambiente e com o cliente.
                         Procuramos atender nossos clientes da maneira mais fácil e segura possível, garantindo a integridade dos produtos e a segurança na compra e na entrega dos mesmos, junto com sementes de plantas diversas como brinde, que tem como objetivo incentivar o cultivo e o respeito à natureza.
                     </Typography>
                 </Box>
                 <Box className='caixa2'>
-                    <Typography variant="h5" align="center"><b>VISÂO</b></Typography>
+                    <Typography variant="h5" align="center">Visão</Typography>
                     <Typography variant="h6" align="center" gutterBottom>
                         Ser referência em fornecimento de produtos, através do e-commerce, com as melhores origens, os melhores equipamentos de industrialização e fidelizando a manutenção
                         adequada dos produtos.
 
                     </Typography>
-                    <Typography variant="h5" color="inherit" align="center"><b>VALORES</b></Typography>
+                    <Typography variant="h5" color="inherit" align="center">VALORES</Typography>
                     <Typography variant="h6" gutterBottom>
                         <ul>
                             <li>Ter a preferência do cliente</li>
@@ -38,7 +38,7 @@ function Home() {
                     </Typography>
                 </Box>
                 <Box>
-                    <Typography variant="h5" color="inherit" align="center"><b>OBJETIVO</b></Typography>
+                    <Typography variant="h5" color="inherit" align="center">OBJETIVO</Typography>
                     <Typography variant="h6" color="inherit" align="center">
                         <p>
                             Criar valores para nossos produtos, obtendo lucros para viabilizar o crescimento da empresa, visando desenvolver melhoramentos contínuos nos processos e na capacitação dos colaboradores.
@@ -51,7 +51,7 @@ function Home() {
                     </Typography>
                 </Box>
                 <Box>
-                    <Typography variant="h5" color="inherit" align="center"><b>SOBRE A NOSSA ECOLOJA</b></Typography>
+                    <Typography variant="h5" color="inherit" align="center">SOBRE A NOSSA ECOLOJA</Typography>
                     <Typography variant="h6" color="inherit" align="center">
                         <p>
                             É um prazer recebê-lo em nossa Ecoloja! Nela você pode encontrar variados tipos de produtos ligados ao Bem Estar e à Saúde. A busca por inovação, qualidade, variedade e respeito junto a nossos clientes são os critérios utilizados por nossa equipe para a seleção dos produtos que oferecemos.
@@ -85,7 +85,7 @@ function Home() {
                 </Box>
                 <Box className='caixa3'>
                     <Box justifyContent="center" alignItems="center">
-                        <Typography variant="h5" color="inherit" align='center'><b>Realizadores do Projeto</b></Typography>
+                        <Typography variant="h5" color="inherit" align='center'>Realizadores do Projeto</Typography>
                     </Box>
 
                     <Box display="flex" justifyContent="center">
@@ -179,4 +179,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default TesteHome;

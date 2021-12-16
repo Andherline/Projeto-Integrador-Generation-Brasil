@@ -57,16 +57,19 @@ function NavBar() {
                                     </Typography>
                                 </Box>
                             </Link>
-                            <Link to='/login' className="text-decorator-none">
-                                <Box mx={1} style={{ cursor: "pointer" }} marginLeft={80}>
+                           
+                        </Box>
+
+                    </Box>
+                    <Box  marginLeft="auto">
+                    <Link to='/login' className="text-decorator-none">
+                                <Box mx={1} style={{ cursor: "pointer" }} >
                                     <Typography variant="h6" color="inherit">
                                         Logout
                                     </Typography>
                                 </Box>
                             </Link>
-                        </Box>
-
-                    </Box>
+                            </Box>
                 </Toolbar>
             </AppBar>
         </>

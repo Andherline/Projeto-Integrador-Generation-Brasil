@@ -4,7 +4,7 @@ import { useHistory, useParams } from 'react-router-dom'
 import './CadastroCategoria.css';
 import useLocalStorage from 'react-use-localstorage';
 import Categoria from '../../../models/Categoria';
-import { buscaId, post } from '../../../services/Service';
+import { buscaId, post, put } from '../../../services/Service';
 
 
 function CadastroCategoria() {
@@ -52,13 +52,23 @@ function CadastroCategoria() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
         console.log("categoria" + JSON.stringify(categoria))
-
-        post(`/categorias`, categoria, setCategoria, {
-            headers: {
-                'Authorization': token
-            }
-        })
-        alert('Categoria cadastrada com sucesso');
+    
+        if (id !== undefined) {
+            console.log(categoria)
+            put(`/categorias`, categoria, setCategoria, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            alert('Categoria atualizado com sucesso');
+        } else {
+            post(`/categorias`, categoria, setCategoria, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            alert('Categoria cadastrado com sucesso');
+        }
         back()
 
     }
