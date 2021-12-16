@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 import Categoria from '../../../models/Categoria';
 import {busca} from '../../../services/Service';
 
-function CadastroCategoria() {
+function ListaCategoria() {
     const [categoria, setCategoria] = useState<Categoria[]>([])
     const [token, setToken] = useLocalStorage('token');
     let history = useHistory();
@@ -47,7 +47,22 @@ function CadastroCategoria() {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Box display="flex" justifyContent="center" mb={1.5} >
+                                <Box display="flex" justifyContent="center" mb={1.5}>
+
+                                    <Link to={`/cadastrarcategorias/${categoria.id}`} className="text-decorator-none" >
+                                        <Box mx={1}>
+                                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                                                atualizar
+                                            </Button>
+                                        </Box>
+                                    </Link>
+                                    <Link to={`/deletarcategorias/${categoria.id}`} className="text-decorator-none">
+                                        <Box mx={1}>
+                                            <Button variant="contained" size='small' color="secondary">
+                                                deletar
+                                            </Button>
+                                        </Box>
+                                    </Link>
                                 </Box>
                             </CardActions>
                         </Card>
@@ -55,8 +70,7 @@ function CadastroCategoria() {
                 ))
             }
         </>
-    );
+    )
 }
 
-
-export default CadastroCategoria;
+export default ListaCategoria;
