@@ -2,11 +2,28 @@ import { Box, Grid, Typography } from '@material-ui/core';
 import React from 'react'
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import Carousel from 'react-elastic-carousel'
+import { useState } from 'react'
 import './Home.css';
 
 function Home() {
+    const [items, setstate] = useState([
+        { id: 1, title: 'item #1', img: "https://i.imgur.com/wNUVda4.png" },
+        { id: 2, title: 'item #2', img: "https://i.imgur.com/JkAh04s.png" },
+        { id: 3, title: 'item #3', img: "https://i.imgur.com/gu92OQl.png" },
+        { id: 4, title: 'item #4', img: "https://i.imgur.com/8CJm93u.png" }
+    ])
+
     return (
         <>
+            <Carousel isRTL={false} enableAutoPlay autoPlaySpeed={15000} className="styling-example">
+                {items.map(item => <div key={item.id}>
+                    <img src={item.img} alt="" width="100%" height="100%" />
+
+                </div>)}
+            </Carousel>
+
+            )
             <Grid direction='column' justifyContent="center" alignItems="center" spacing={2}>
                 <Box className='caixa1' paddingTop={1}>
                     <Typography variant="h5" color="inherit" align="center"><b>MISSÃO</b></Typography>
