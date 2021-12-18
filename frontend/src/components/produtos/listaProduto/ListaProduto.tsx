@@ -4,19 +4,22 @@ import Produto from '../../../models/Produto';
 import { busca } from '../../../services/Service'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaProduto.css';
-import useLocalStorage from 'react-use-localstorage';
 import { useHistory } from 'react-router-dom'
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+
 
 function ListaProduto() {
     const [produtos, setProdutos] = useState<Produto[]>([])
-    const [token, setToken] = useLocalStorage('token');
     let history = useHistory();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
     useEffect(() => {
-        if (token == "") {
+        if (token == '') {
             alert("Você precisa estar logado")
             history.push("/login")
-
         }
     }, [token])
 
@@ -29,7 +32,6 @@ function ListaProduto() {
     }
 
     useEffect(() => {
-
         getProduto()
 
     }, [produtos.length])
@@ -55,7 +57,7 @@ function ListaProduto() {
                                 <Typography variant="body2" component="p">
                                     {produto.descricao}
                                 </Typography>
-                            
+
                                 <Typography variant="body2" component="p">
                                     {produto.categoria?.palavrachave}
                                 </Typography>
@@ -65,15 +67,22 @@ function ListaProduto() {
 
                                     <Link to={`/cadastrarproduto/${produto.id}`} className="text-decorator-none" >
                                         <Box mx={1}>
-                                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                                            <Button variant="contained" size='small' style={{backgroundColor:'#5F7316', color:'white'}}  >
                                                 atualizar
                                             </Button>
                                         </Box>
                                     </Link>
                                     <Link to={`/deletarproduto/${produto.id}`} className="text-decorator-none">
                                         <Box mx={1}>
-                                            <Button variant="contained" size='small' color="secondary">
+                                            <Button variant="contained" size='small' style={{backgroundColor:'white', color:'#5F7316',border:'1px solid #C9E265',borderColor: '#5F7316'}}>
                                                 deletar
+                                            </Button>
+                                        </Box>
+                                    </Link>
+                                    <Link to={`/comprar/${produto.id}`} className="text-decorator-none">
+                                        <Box mx={1}>
+                                            <Button variant="contained" size='small' style={{backgroundColor:'#5F7316', color:'white'}} >
+                                                comprar
                                             </Button>
                                         </Box>
                                     </Link>

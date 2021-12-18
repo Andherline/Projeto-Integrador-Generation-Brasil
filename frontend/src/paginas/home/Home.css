@@ -19,12 +19,44 @@
 }
 
 @media only screen and (max-width: 600px) {
-   .card {
+.card {
     width: 100%;
     }
-  }
+}
+
+.card {
+    width: 100%;
+    }
 
   /* square buttons */
 .rec.rec-arrow {
     background-color: #5F7316!important;
-}   
+}
+
+.lcUbOd {
+    box-sizing: border-box;
+    padding: 0;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+    border: none;
+    margin: 5px;
+    background-color: #d5d977 !important;
+    font-size: 1.3em;
+    content: "";
+    height: 10px;
+    width: 10px;
+    box-shadow: 0 0 1px 3px #88a61c !important;
+    border-radius: 50%;
+    outline: none;
+}
+.eaptOe:hover, .eaptOe:focus {
+    cursor: pointer;
+    box-shadow: 0 0 1px 3px #2c4001 !important;
+}
+.lcUbOd:hover, .lcUbOd:focus {
+    cursor: pointer;
+    box-shadow: 0 0 1px 3px #172601 !important;
+}
+
+
+    

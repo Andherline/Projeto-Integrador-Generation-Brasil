@@ -1,12 +1,22 @@
 import { Box, Grid, Typography } from '@material-ui/core';
-import React from 'react'
+import React, { useEffect } from 'react';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import './Home.css';
+import { toast } from 'react-toastify';
+import { useHistory } from 'react-router';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
 import Carousel from 'react-elastic-carousel'
 import { useState } from 'react'
-import './Home.css';
+
 
 function Home() {
+    
+    let history = useHistory();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
     const [items, setstate] = useState([
         { id: 1, title: 'item #1', img: "https://i.imgur.com/wNUVda4.png" },
         { id: 2, title: 'item #2', img: "https://i.imgur.com/JkAh04s.png" },
@@ -14,9 +24,25 @@ function Home() {
         { id: 4, title: 'item #4', img: "https://i.imgur.com/8CJm93u.png" }
     ])
 
+    useEffect(() => {
+        if (token == "") {
+            toast.error('Você precisa estar logado', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+            history.push("/login")
+
+        }
+    }, [token])
     return (
         <>
-            <Carousel isRTL={false} enableAutoPlay autoPlaySpeed={15000} className="styling-example">
+        <Carousel isRTL={false} enableAutoPlay autoPlaySpeed={15000} className="styling-example">
                 {items.map(item => <div key={item.id}>
                     <img src={item.img} alt="" width="100%" height="100%" />
 

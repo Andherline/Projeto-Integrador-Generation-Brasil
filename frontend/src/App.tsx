@@ -16,6 +16,9 @@ import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria
 import ListaProduto from './components/produtos/listaProduto/ListaProduto';
 import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
+import Compra from './paginas/compras/Compra';
+
+
 //import TesteHome from './paginas/testehome/TesteHome';
 
 function App() {
@@ -75,6 +78,9 @@ function App() {
               <DeletarProduto />
             </Route>
 
+            <Route exact path='/comprar/:id'>
+              <Compra />
+            </Route>
           </div>
         </Switch>
         <Footer />
