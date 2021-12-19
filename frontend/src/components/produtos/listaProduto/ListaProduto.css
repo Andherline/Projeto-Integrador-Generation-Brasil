@@ -1,3 +1,27 @@
 .text-decorator-none{
     text-decoration: none;
 }
+
+.card-produto{
+    border-radius: 10px;
+    width: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+.card-produto {
+    width: 30%;
+    }
+}
+
+.card-produto {
+    width: 30%;
+    }
+.img-produto{
+    width: 100%;
+}
+
+.caixa-produto{
+    width: auto;
+    height: auto;
+}
+
