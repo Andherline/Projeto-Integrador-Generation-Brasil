@@ -12,7 +12,7 @@ import { useState } from 'react'
 
 
 function Home() {
-
+    
     let history = useHistory();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
@@ -42,7 +42,7 @@ function Home() {
     }, [token])
     return (
         <>
-            <Carousel isRTL={false} enableAutoPlay autoPlaySpeed={15000} className="styling-example">
+        <Carousel isRTL={false} enableAutoPlay autoPlaySpeed={15000} className="styling-example">
                 {items.map(item => <div key={item.id}>
                     <img src={item.img} alt="" width="100%" height="100%" />
 
@@ -134,35 +134,13 @@ function Home() {
                     <Box display="flex" justifyContent="center">
                         <Box border={1} marginY={5} marginX={2} padding={2}
                             className="card">
-                            <Box className='img-membros'>
-                                <img src="https://i.imgur.com/mzPOtQ0.jpeg" width="100%" height="100%" alt="" />
+                            <Box>
+                                <img src="https://imgur.com/hVavFPA.png" width="100%" alt="" />
                             </Box>
-                            <Typography variant="h3" color="initial" align='center'>Amanda</Typography>
-                            <Typography variant="h5" color="initial">
-                                Atuei no projeto, tanto nas partes de back end, quanto de front ent. Colaborei em equipe para desenvolver um layout criativo, estilizado e funcional.
-                                Estou conectada com o mundo da tecnologia desde criança
-                                E no meu tempo livre, gosto de ver Netflix e passar um tempo com a minha família e amigos.
-                            </Typography>
+                            <Typography variant="h3" color="initial">Membro</Typography>
+                            <Typography variant="h5" color="initial">Descricao: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus commodi dignissimos provident?</Typography>
                             <Box display="flex" alignItems="center" justifyContent="center">
-                                <a href="https://github.com/AmandaFaria" target="_blank">
-                                    <GitHubIcon style={{ fontSize: 30, color: "black" }} />
-                                </a>
-                                <a href="https://www.linkedin.com/in/amanda-faria34/" target="_blank">
-                                    <LinkedInIcon style={{ fontSize: 35, color: "black" }} />
-                                </a>
-                            </Box>
-                        </Box>
-                        <Box border={1} marginY={5} marginX={2} padding={2}
-                            className="card">
-                            <Box className='img-membros'>
-                                <img src="https://imgur.com/hVavFPA.png" width="100%" height="100%" alt="" />
-                            </Box>
-                            <Typography variant="h3" color="initial" align='center'>Anderson</Typography>
-                            <Typography variant="h5" color="initial" align='justify'>
-                                No projeto atuou no backend na criação da api do ecommerce e no frontend na estilização das páginas da ecoloja
-                            </Typography>
-                            <Box display="flex" alignItems="center" justifyContent="center">
-                                <a href="https://github.com/Andherline" target="_blank">
+                                <a href="https://github.com" target="_blank">
                                     <GitHubIcon style={{ fontSize: 30, color: "black" }} />
                                 </a>
                                 <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
@@ -172,19 +150,32 @@ function Home() {
                         </Box>
                         <Box border={1} marginY={5} marginX={2} padding={2}
                             className="card">
-                            <Box className='img-membros'>
-                                <img src="https://i.imgur.com/BNGEqYM.jpg" width="100%" alt="" />
+                            <Box>
+                                <img src="https://imgur.com/hVavFPA.png" width="100%" alt="" />
                             </Box>
-                            <Typography variant="h3" color="initial" align='center'>Giovanni</Typography>
-                            <Typography variant="h5" color="initial">
-                                Atuei na descrição do projeto e também colaborei com a construção dos códigos de Frontend.
-                                Estou muito empolgado com esse vasto mundo da tecnologia e pretendo aprender e me desenvolver cada vez mais para me tornar um excelente profissional.
-                            </Typography>
+                            <Typography variant="h3" color="initial">Membro</Typography>
+                            <Typography variant="h5" color="initial">Descricao: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus commodi dignissimos provident?</Typography>
                             <Box display="flex" alignItems="center" justifyContent="center">
-                                <a href="https://github.com/GiovanniMarcinari" target="_blank">
+                                <a href="https://github.com" target="_blank">
                                     <GitHubIcon style={{ fontSize: 30, color: "black" }} />
                                 </a>
-                                <a href="https://www.linkedin.com/in/giovanni-marcinari-09a903215/" target="_blank">
+                                <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
+                                    <LinkedInIcon style={{ fontSize: 35, color: "black" }} />
+                                </a>
+                            </Box>
+                        </Box>
+                        <Box border={1} marginY={5} marginX={2} padding={2}
+                            className="card">
+                            <Box>
+                                <img src="https://imgur.com/hVavFPA.png" width="100%" alt="" />
+                            </Box>
+                            <Typography variant="h3" color="initial">Membro</Typography>
+                            <Typography variant="h5" color="initial">Descricao: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus commodi dignissimos provident?</Typography>
+                            <Box display="flex" alignItems="center" justifyContent="center">
+                                <a href="https://github.com" target="_blank">
+                                    <GitHubIcon style={{ fontSize: 30, color: "black" }} />
+                                </a>
+                                <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
                                     <LinkedInIcon style={{ fontSize: 35, color: "black" }} />
                                 </a>
                             </Box>
@@ -194,18 +185,15 @@ function Home() {
                         <Box border={1} marginY={5} marginX={2} padding={2}
                             className="card">
                             <Box>
-                                <img src="https://i.imgur.com/hfhjShz.jpg" width="100%" height="100%" alt="" />
+                                <img src="https://imgur.com/hVavFPA.png" width="100%" alt="" />
                             </Box>
-                            <Typography variant="h3" color="initial" align='center'>Isabella</Typography>
-                            <Typography variant="h5" color="initial">
-                                Atuei no projeto nas partes do back e do front end, além disso, contribui ajudando com ideias na estilização.
-                                Nas minhas horas vagas, sempre fico em contato com a tecnologia, gosto de escutar música e assistir a filmes e séries
-                            </Typography>
+                            <Typography variant="h3" color="initial">Membro</Typography>
+                            <Typography variant="h5" color="initial">Descricao: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus commodi dignissimos provident?</Typography>
                             <Box display="flex" alignItems="center" justifyContent="center">
-                                <a href="https://github.com/isabellammarinho" target="_blank">
+                                <a href="https://github.com" target="_blank">
                                     <GitHubIcon style={{ fontSize: 30, color: "black" }} />
                                 </a>
-                                <a href="https://www.linkedin.com/in/isabella-marinho-b75311221/" target="_blank">
+                                <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
                                     <LinkedInIcon style={{ fontSize: 35, color: "black" }} />
                                 </a>
                             </Box>
@@ -216,13 +204,13 @@ function Home() {
                             <Box>
                                 <img src="https://imgur.com/hVavFPA.png" width="100%" alt="" />
                             </Box>
-                            <Typography variant="h3" color="initial" align='center'>Rafael</Typography>
+                            <Typography variant="h3" color="initial">Membro</Typography>
                             <Typography variant="h5" color="initial">Descricao: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus commodi dignissimos provident?</Typography>
                             <Box display="flex" alignItems="center" justifyContent="center">
-                                <a href="https://github.com/Rafa-Paiva" target="_blank">
+                                <a href="https://github.com" target="_blank">
                                     <GitHubIcon style={{ fontSize: 30, color: "black" }} />
                                 </a>
-                                <a href="https://www.linkedin.com/in/rafael-paiva-70b117221/" target="_blank">
+                                <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
                                     <LinkedInIcon style={{ fontSize: 35, color: "black" }} />
                                 </a>
                             </Box>
