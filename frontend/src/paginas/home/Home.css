@@ -28,6 +28,8 @@
     width: 100%;
     }
 
+
+
   /* square buttons */
 .rec.rec-arrow {
     background-color: #5F7316!important;
@@ -58,5 +60,8 @@
     box-shadow: 0 0 1px 3px #172601 !important;
 }
 
-
+.img-membros{
+    width: 384px;
+    height: 384px
+}
     
