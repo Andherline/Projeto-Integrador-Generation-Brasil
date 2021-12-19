@@ -1,20 +1,35 @@
 import React, { useEffect, useState } from 'react'
-import { Typography, Button, Box, Card, CardActions, CardContent } from "@material-ui/core"
+import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './DeletarProduto.css';
 import { useHistory, useParams } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
-import Produto from '../../../models/Produto';
 import { buscaId, deleteId } from '../../../services/Service';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import Produto from '../../../models/Produto';
+
+
 
 function DeletarProduto() {
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
-    const [token, setToken] = useLocalStorage('token');
-    const [post, setPosts] = useState<Produto>();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+    const [produto, setProdutos] = useState<Produto>()
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado!")
+            toast.error('Você precisa estar logado', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
             history.push("/login")
 
         }
@@ -27,7 +42,7 @@ function DeletarProduto() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/produtos/${id}`, setPosts, {
+        buscaId(`/produtos/${id}`, setProdutos, {
             headers: {
                 'Authorization': token
             }
@@ -41,7 +56,16 @@ function DeletarProduto() {
                 'Authorization': token
             }
         });
-        alert('Produto deletado com sucesso.');
+        toast.success('Produto deletado com sucesso', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+        });
     }
 
     function nao() {
@@ -54,10 +78,10 @@ function DeletarProduto() {
                     <CardContent>
                         <Box justifyContent="center">
                             <Typography color="textSecondary" gutterBottom>
-                                Deseja deletar o produto?
+                                Deseja deletar a Categoria:
                             </Typography>
                             <Typography color="textSecondary" >
-                                {post?.nome}
+                                {produto?.id}
                             </Typography>
                         </Box>
 

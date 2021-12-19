@@ -4,12 +4,16 @@ import { Box, Card, CardActions, CardContent, Button, Typography } from '@materi
 import useLocalStorage from 'react-use-localstorage';
 import { useHistory } from 'react-router-dom';
 import Categoria from '../../../models/Categoria';
-import {busca} from '../../../services/Service';
+import { busca } from '../../../services/Service';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function ListaCategoria() {
     const [categoria, setCategoria] = useState<Categoria[]>([])
-    const [token, setToken] = useLocalStorage('token');
     let history = useHistory();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
     useEffect(() => {
         if (token == '') {
@@ -17,6 +21,8 @@ function ListaCategoria() {
             history.push("/login")
         }
     }, [token])
+
+
 
 
     async function getCategoria() {
@@ -51,14 +57,14 @@ function ListaCategoria() {
 
                                     <Link to={`/cadastrarcategorias/${categoria.id}`} className="text-decorator-none" >
                                         <Box mx={1}>
-                                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                                            <Button variant="contained" size='small' style={{backgroundColor:'#5F7316', color:'white'}}  >
                                                 atualizar
                                             </Button>
                                         </Box>
                                     </Link>
                                     <Link to={`/deletarcategorias/${categoria.id}`} className="text-decorator-none">
                                         <Box mx={1}>
-                                            <Button variant="contained" size='small' color="secondary">
+                                            <Button variant="contained" size='small' style={{backgroundColor:'white', color:'#5F7316',border:'1px solid #C9E265',borderColor: '#5F7316'}}>
                                                 deletar
                                             </Button>
                                         </Box>

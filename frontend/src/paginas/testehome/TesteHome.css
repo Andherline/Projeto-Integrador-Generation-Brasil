@@ -1,0 +1,28 @@
+.caixa1{
+    width: auto;
+    height: auto
+}
+.caixa2{
+    width: auto;
+    height: auto
+}
+.caixa3{
+    width: auto;
+    height: auto
+}
+
+.card{
+    border-radius: 10px;
+    width: 20%;
+    background-color: #C9E265;
+    border: 1px solid #C9E265!important;
+}
+
+@media only screen and (max-width: 600px) {
+   .card {
+    width: 100%;
+    }
+  }
+
+
+    

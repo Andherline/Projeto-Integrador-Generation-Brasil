@@ -1,15 +1,16 @@
 .card{
     background: white;
+    width: 35% !important;
+    height: 110% !important;
 }
 
 .background{
-    background: rgb(52,64,26);
-    background: linear-gradient(0deg, rgba(52,64,26,1) 0%, rgba(100,115,47,1) 44%, rgba(202,217,89,1) 100%); 
+    background-image: url ('https://imgur.com/t7tYIgp.png');
     background-repeat: no-repeat;
-    width: 100vh;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
+
 }
 
 .color-input{

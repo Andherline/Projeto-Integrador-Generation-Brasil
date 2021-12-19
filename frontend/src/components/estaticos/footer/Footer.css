@@ -1,18 +1,24 @@
 .box1{
-    background-color: #3F51B5;
-    height: 120px;
+    background-color: #5F7316 !important; 
+    height: "120px"
 }
 
 .box2{
-    background-color: #303F9F;
+    background-color: #2C4001 !important;
     height: 60px;
 }
 
-.redes{
+/*.redes{
     font-size: 60px !important;
     color: white;
 }
 
 .textos{
    color: white;
+}*/
+
+.logo{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
 }

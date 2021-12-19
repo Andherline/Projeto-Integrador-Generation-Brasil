@@ -1,17 +1,40 @@
-.imagem2{
-    background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
+.card{
+    background-color: white;
+    border-color: white;
+    width: 35% !important;
+    height: 110% !important;
+}
+
+.background{
+    background-image: url('https://imgur.com/t7tYIgp.png');
     background-repeat: no-repeat;
-    width: 100vh;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
+
 }
 
-.textos2{
-    font-weight: bold !important;
+.color-input{
+    background: transparent;
+    border-radius: 5px;
+    height: 30px;
 }
 
-.btnCancelar{
-    margin-right: 20px !important;
+.text-decorator-none{
+    text-decoration: none;
 }
 
+.botao{
+    background: rgba(52,64,26,1)!important;
+    color: white !important;
+}
+
+.icon{
+    margin: 1px;
+    background: rgba(52,64,26,1)!important;
+}
+
+.teste{
+    color: black;
+    text-align: center;
+}
