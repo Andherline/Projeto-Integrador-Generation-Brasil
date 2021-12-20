@@ -141,33 +141,14 @@ function CadastroCategoria() {
     return (
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro de produto</Typography>
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro de categoria</Typography>
                 <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tipo" label="tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
                 <TextField value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
                 <TextField value={categoria.palavrachave} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="palavrachave" label="palavrachave" variant="outlined" name="palavrachave" margin="normal" fullWidth />
 
-
-                <FormControl >
-                    <InputLabel id="demo-simple-select-helper-label">Categoria </InputLabel>
-                    <Select
-                        labelId="demo-simple-select-helper-label"
-                        id="demo-simple-select-helper"
-                        onChange={(e) => buscaId(`/categorias/${e.target.value}`, setCategoria, {
-                            headers: {
-                                'Authorization': token
-                            }
-                        })}>
-                        {
-                            categorias.map(categoria => (
-                                <MenuItem value={categoria.id}>{categoria.palavrachave}</MenuItem>
-                            ))
-                        }
-                    </Select>
-                    <FormHelperText>Escolha uma categoria para o produto</FormHelperText>
-                    <Button type="submit" variant="contained" style={{backgroundColor: '#5f7316', color: 'white'}}>
+                <Button type="submit" variant="contained" style={{backgroundColor: '#5f7316', color: 'white'}}>
                         Cadastrar
                     </Button>
-                </FormControl>
             </form>
         </Container>
     )

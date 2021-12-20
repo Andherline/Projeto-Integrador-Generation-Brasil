@@ -142,8 +142,8 @@ function Home() {
                             <Typography variant="h3" color="initial" align='center'>Amanda</Typography>
                             <Typography variant="h5" color="initial">
                                 Atuei no projeto, tanto nas partes de back end, quanto de front ent. Colaborei em equipe para desenvolver um layout criativo, estilizado e funcional.
-                                Estou conectada com o mundo da tecnologia desde criança
-                                E no meu tempo livre, gosto de ver Netflix e passar um tempo com a minha família e amigos.
+                                Estou conectada com o mundo da tecnologia desde criança.
+                                Gosto de ver Netflix e passar um tempo com a minha família e amigos.
                             </Typography>
                             <Box display="flex" alignItems="center" justifyContent="center">
                                 <a href="https://github.com/AmandaFaria" target="_blank">
@@ -161,7 +161,7 @@ function Home() {
                             </Box>
                             <Typography variant="h3" color="initial" align='center'>Anderson</Typography>
                             <Typography variant="h5" color="initial" align='justify'>
-                                No projeto atuou no backend na criação da api do ecommerce e no frontend na estilização das páginas da ecoloja
+                            No projeto atuei no backend na criação da api do ecommerce e no frontend na estilização das páginas da ecoloja. Tive uma experiência fullstack no projeto, me  permitindo ter  uma  visão holística dele. Pois sempre tive interesse em saber como as coisas funcionam e as relações entre elas.
                             </Typography>
                             <Box display="flex" alignItems="center" justifyContent="center">
                                 <a href="https://github.com/Andherline" target="_blank">
@@ -201,7 +201,7 @@ function Home() {
                             <Typography variant="h3" color="initial" align='center'>Isabella</Typography>
                             <Typography variant="h5" color="initial">
                                 Atuei no projeto nas partes do back e do front end, além disso, contribui ajudando com ideias na estilização.
-                                Nas minhas horas vagas, sempre fico em contato com a tecnologia, gosto de escutar música e assistir a filmes e séries
+                                Nas minhas horas vagas, sempre fico em contato com a tecnologia, gosto de escutar música e assistir a filmes e séries.
                             </Typography>
                             <Box display="flex" alignItems="center" justifyContent="center">
                                 <a href="https://github.com/isabellammarinho" target="_blank">
@@ -219,7 +219,7 @@ function Home() {
                                 <img src="https://imgur.com/hVavFPA.png" width="100%" alt="" />
                             </Box>
                             <Typography variant="h3" color="initial" align='center'>Rafael</Typography>
-                            <Typography variant="h5" color="initial">Descricao: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea accusamus commodi dignissimos provident?</Typography>
+                            <Typography variant="h5" color="initial">Participei das partes de estilização da home, cadastro e login, também partes das funções de backEnd  mas principalmente no FrontEnd, tenho uma forte ligação com essa parte da tecnologia envolvendo computadores.</Typography>
                             <Box display="flex" alignItems="center" justifyContent="center">
                                 <a href="https://github.com/Rafa-Paiva" target="_blank">
                                     <GitHubIcon style={{ fontSize: 30, color: "black" }} />

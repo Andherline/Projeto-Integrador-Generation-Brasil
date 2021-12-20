@@ -7,6 +7,7 @@ import './Footer.css';
 import { useSelector } from 'react-redux';
 import { useDispatch } from "react-redux";
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { Link } from 'react-router-dom';
 
 
 //alinha o sobre nós: margin ou padding
@@ -44,7 +45,9 @@ function Footer() {
             </Box>
           </Box>
           <Box padding={2} display="flex" alignItems="center" justifyContent="center">
+            <Link to='/home' className="text-decorator-none">
             <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Sobre Nós</Typography>
+            </Link> 
           </Box>
         </Box>
         <Box className='box2'>
