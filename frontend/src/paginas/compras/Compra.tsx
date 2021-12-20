@@ -21,10 +21,10 @@ function Compra() {
     const [produtos, setProdutos] = useState<Produto[]>([])
     const [items, setstate] = useState([
     
-        { id: 1, title: 'item #1', img: "https://m.media-amazon.com/images/I/61R-z5IwS8L._AC_AA180_.jpg" },
-        { id: 2, title: 'item #2', img: "https://m.media-amazon.com/images/I/61R-z5IwS8L._AC_AA180_.jpg" },
-        { id: 3, title: 'item #3', img: "https://m.media-amazon.com/images/I/61R-z5IwS8L._AC_AA180_.jpg" },
-        { id: 4, title: 'item #4', img: "https://m.media-amazon.com/images/I/61R-z5IwS8L._AC_AA180_.jpg" }
+        { id: 1, title: 'item #1', img: "https://i.imgur.com/rGhB3fJ.jpeg" },
+        { id: 2, title: 'item #2', img: "https://i.imgur.com/M4dri5N.png" },
+        { id: 3, title: 'item #3', img: "https://i.imgur.com/qnYWE9s.png" },
+        { id: 4, title: 'item #4', img: "https://i.imgur.com/G5gLDSj.jpeg" }
     ])
 
     useEffect(() => {
