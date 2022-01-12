@@ -64,4 +64,30 @@
     width: 384px;
     height: 384px
 }
+
+.img-home{
+    width: 700px;
+    height: 500px;
+}
+
+.missao{
+    padding: 10px;
+    background-color: #C9E265!important;
+}
+
+.fundo-missao{
+    background-color: #C9E265!important;
+    margin-bottom: 30px;
+}
+
+.valores{
+    padding: 0 90px 0 90px;
+}
+
+.btn-saibamais{
+    margin-top: 10px!important;
+    background-color: #2c4001!important;
+    color: white!important;
+    padding: 10px 60px 10px 60px!important;
+}
     

@@ -1,0 +1,11 @@
+.btn-sim{
+    background-color: #5F7316!important;
+    color: white!important;
+}
+
+.btn-nao{
+    background: none!important;
+    border: 1px solid #C9E265!important;
+    border-color: #5F7316!important;
+    color: #5F7316!important;
+}
