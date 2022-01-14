@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import Carousel from 'react-elastic-carousel'
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -53,7 +54,7 @@ function Home() {
 
             <Box display="flex" justifyContent='center' alignItems='center' className='fundo-missao'>
                 <Box display="flex" alignItems='center' justifyContent='center'>
-                    <img className='img-home' src="https://cdn.pixabay.com/photo/2013/08/20/15/47/poppies-174276_960_720.jpg" alt="missao" />
+                    <img className='img-home' src="https://images.pexels.com/photos/4121087/pexels-photo-4121087.jpeg" alt="missao" />
                 </Box>
                 <Box justifyContent='initial' alignItems='flex-start' className='missao'>
                     <Typography variant="h5" color="inherit" align="center"><b>MISSÃO</b></Typography>
@@ -79,7 +80,7 @@ function Home() {
 
             <Box display="flex" justifyContent='center' alignItems='center' className='fundo-missao'>
                 <Box display="flex" alignItems='center' justifyContent='center'>
-                    <img className='img-home' src="https://cdn.pixabay.com/photo/2013/08/20/15/47/poppies-174276_960_720.jpg" alt="missao" />
+                    <img className='img-home' src="https://images-ext-2.discordapp.net/external/TtQ5eZ8bi8a6k2WGjWUcxdj4vl8b1HGSLXSKHBDw1aA/%3Fauto%3Dcompress%26cs%3Dtinysrgb%26dpr%3D2%26h%3D650%26w%3D940/https/images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg" alt="missao" />
                 </Box>
                 <Box justifyContent='initial' alignItems='flex-start' className='valores'>
                     <Typography variant="h5" color="inherit" align="center"><b>VALORES</b></Typography>
@@ -114,57 +115,25 @@ function Home() {
                     </Typography>
                 </Box>
                 <Box display="flex" alignItems='center' justifyContent='center'>
-                    <img className='img-home' src="https://cdn.pixabay.com/photo/2013/08/20/15/47/poppies-174276_960_720.jpg" alt="missao" />
+                    <img className='img-home' src="https://images-ext-1.discordapp.net/external/yNrXW3cSar76MspdgDHPi4WYpwb8lj1W9WFMbegAZJU/%3Fauto%3Dcompress%26cs%3Dtinysrgb%26dpr%3D2%26h%3D650%26w%3D940/https/images.pexels.com/photos/8543118/pexels-photo-8543118.jpeg" alt="missao" />
                 </Box>
             </Box>   
 
             <Box display="flex" justifyContent='center' alignItems='center' className='fundo-missao'>
                 <Box display="flex" alignItems='center' justifyContent='center'>
-                    <img className='img-home' src="https://cdn.pixabay.com/photo/2013/08/20/15/47/poppies-174276_960_720.jpg" alt="missao" />
+                    <img className='img-home' src="https://images-ext-2.discordapp.net/external/MIz5FDeQhf6V1RkX5G9Fqj5edcVEp3agwA465Rhavgo/%3Fauto%3Dcompress%26cs%3Dtinysrgb%26dpr%3D2%26h%3D650%26w%3D940/https/images.pexels.com/photos/8140917/pexels-photo-8140917.jpeg" alt="missao" />
                 </Box>
                 <Box justifyContent='initial' alignItems='flex-start' className='missao'>
                     <Typography variant="h5" color="inherit" align="center"><b>SOBRE A NOSSA ECOLOJA</b></Typography>
                     <Typography variant="h6">
                         É um prazer recebê-lo em nossa Ecoloja! Nela você pode encontrar variados tipos de produtos ligados ao Bem Estar e à Saúde. A busca por inovação, qualidade, variedade e respeito junto a nossos clientes são os critérios utilizados por nossa equipe para a seleção dos produtos que oferecemos.
                     </Typography>
-                    <Button size='medium' className='btn-saibamais'>Saiba mais</Button>                    
+                    <Link to ='/sobre'>
+                        <Button size='medium' className='btn-saibamais'>Saiba mais</Button>
+                    </Link>                    
                 </Box>                
             </Box>
 
-            
-            <Box>
-                <Typography variant="h5" color="inherit" align="center"><b>SOBRE A NOSSA ECOLOJA</b></Typography>
-                <Typography variant="h6" color="inherit" align="center">
-                    <p>
-                        É um prazer recebê-lo em nossa Ecoloja! Nela você pode encontrar variados tipos de produtos ligados ao Bem Estar e à Saúde. A busca por inovação, qualidade, variedade e respeito junto a nossos clientes são os critérios utilizados por nossa equipe para a seleção dos produtos que oferecemos.
-                    </p>
-                    <p>
-                        Trabalhamos com os principais fornecedores e os melhores e mais atualizados produtos nacionais e importados para que o nosso público encontre a variedade, a seleção e a qualidade que procura.
-                    </p>
-                    <p>
-                        Nossa missão é oferecer produtos que possam melhorar a qualidade de vida de nossos estimados clientes.
-
-                    </p>
-                    <p>
-                        Buscando sempre a inovação para melhor atender os nossos clientes criamos a Ecoloja. Um site moderno, seguro e simples, onde você encontra produtos de primeira linha e contribui com o meio ambiente.
-                    </p>
-                    <p>
-                        Atualmente, vivemos uma época em que as pessoas buscam cada vez mais expressar suas opiniões e procurar encontrar por si mesmo todas as informações na Internet. Dentre muitas áreas, algumas questões acabam ganhando destaque, como questões ambientais e de sustentabilidade. Isso é muito positivo e importante, incentivando muitas empresas a se adaptar e criar novas formas de produzir e atender as necessidades dos clientes.
-                    </p>
-                    <p>
-                        Com o desenvolvimento das redes sociais e a aquisição de mais informações na Internet, as pessoas estão mais interessadas e preocupadas com o ecossistema, o meio ambiente, os animais e os empreendimentos sociais. No mercado, em geral, os consumidores estão comprando cada vez mais, marcas que tem como foco a sustentabilidade e o respeito ao meio ambiente, seja online ou offline.
-                    </p>
-                    <p>
-                        Portanto, a sustentabilidade é muito importante inclusive para atrair novos consumidores, fidelizar os clientes, aumentar as vendas de produtos e valorizar a imagem no mercado.
-                    </p>
-                    <p>
-                        Em um mundo cada vez mais consciente, acreditamos que vincular nosso e-commerce à ações e atitudes sustentáveis ​​é fundamental.
-                    </p>
-                    <p>
-                        A sustentabilidade do e-commerce é uma questão básica que precisa ser discutida, pois pode trazer muitos benefícios para as marcas, a sociedade e o meio ambiente. Acreditamos no impacto positivo que podemos ter na psicologia de muitas pessoas aumentando sua consciência sobre como os produtos são produzidos e descartados, encontrando maneiras de trabalhar com menos poluição, usando materiais reutilizáveis ​​ou recicláveis, visando uma produção que não agrida a natureza, dentre muitas outras possibilidades criativas que podem permitir uma integração maior entre a sociedade e o ecossistema.
-                    </p>
-                </Typography>
-            </Box>
             <Box className='caixa3'>
                 <Box justifyContent="center" alignItems="center">
                     <Typography variant="h5" color="inherit" align='center'><b>Realizadores do Projeto</b></Typography>
@@ -194,7 +163,7 @@ function Home() {
                     <Box border={1} marginY={5} marginX={2} padding={2}
                         className="card">
                         <Box className='img-membros'>
-                            <img src="https://imgur.com/hVavFPA.png" width="100%" height="100%" alt="" />
+                            <img src="https://i.imgur.com/3VhTncM.jpg" width="100%" height="100%" alt="" />
                         </Box>
                         <Typography variant="h3" color="initial" align='center'>Anderson</Typography>
                         <Typography variant="h5" color="initial" align='justify'>
@@ -204,7 +173,7 @@ function Home() {
                             <a href="https://github.com/Andherline" target="_blank">
                                 <GitHubIcon style={{ fontSize: 30, color: "black" }} />
                             </a>
-                            <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
+                            <a href="https://www.linkedin.com/in/andersousasilva/" target="_blank">
                                 <LinkedInIcon style={{ fontSize: 35, color: "black" }} />
                             </a>
                         </Box>
@@ -253,7 +222,7 @@ function Home() {
                     <Box border={1} marginY={5} marginX={2} padding={2}
                         className="card">
                         <Box>
-                            <img src="https://imgur.com/hVavFPA.png" width="100%" alt="" />
+                            <img src="https://i.imgur.com/2eXukAj.jpg" width="100%" alt="" />
                         </Box>
                         <Typography variant="h3" color="initial" align='center'>Rafael</Typography>
                         <Typography variant="h5" color="initial">Participei das partes de estilização da home, cadastro e login, também partes das funções de backEnd  mas principalmente no FrontEnd, tenho uma forte ligação com essa parte da tecnologia envolvendo computadores.</Typography>

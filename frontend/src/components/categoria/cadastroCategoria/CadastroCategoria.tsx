@@ -135,7 +135,7 @@ function CadastroCategoria() {
     }
 
     function back() {
-        history.push('/categoria')
+        history.push('/categorias')
     }
 
     return (

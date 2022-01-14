@@ -17,6 +17,7 @@ import ListaProduto from './components/produtos/listaProduto/ListaProduto';
 import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
 import Compra from './paginas/compras/Compra';
+import Sobre from './paginas/sobre/Sobre';
 
 
 //import TesteHome from './paginas/testehome/TesteHome';
@@ -40,6 +41,10 @@ function App() {
 
             <Route path='/home'>
               <Home />
+            </Route>
+
+            <Route path='/sobre'>
+              <Sobre />
             </Route>
 
             <Route path='/cadastrousuario'>

@@ -23,7 +23,7 @@ function Footer() {
     footerComponent = <Grid container direction="row" justifyContent="center" alignItems="center">
       <Grid alignItems="center" item xs={12}>
         <Box display="flex" justifyContent="space-between" className='box1'>
-          <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
+          <Box paddingTop={1} paddingLeft={2} display="flex" alignItems="center" justifyContent="center">
             <Typography variant="h5" color="inherit" >
               <img src="https://imgur.com/hVavFPA.png" alt="logo" className="logo" />
             </Typography>
